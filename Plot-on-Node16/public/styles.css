@@ -1,0 +1,188 @@
+
+body, button, input{
+    font-family: 'GardenGnome';
+}
+
+button{
+    cursor: pointer;
+}
+
+#app{ 
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: repeating-linear-gradient(
+        45deg,
+        #f0e8d2,
+        #f0e8d2 20px,
+        #ebe0c2 20px,
+        #ebe0c2 40px
+        );
+}
+
+
+#hello{
+    background: #9ddcf5;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#hello .logo{
+    margin: 2rem;
+}
+#hello form{
+    padding: 2rem;
+    background: none;
+    display: flex;
+    flex-direction: column;
+}
+#hello label{
+    align-self: flex-start;
+}
+#hello input{
+    padding: 1rem;
+    border: none;
+}
+#hello button{
+    margin-top: 0.25rem;
+    align-self: flex-end;
+    margin-left: 0.25rem;
+    padding: 1rem;
+    border: none;
+    background: orange;
+    color: #fff; 
+}
+
+#navigation{
+    background: #9ddcf5;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.logo{
+    text-decoration: none;
+    font-size: 2em;
+    color: rgb(190, 90, 8);
+    margin: 1rem;
+}
+#plotButton{
+    background: transparent;
+    border: none;
+    font-family: 'GardenGnome';
+    color: #317d9b;
+    font-size: 1rem; 
+}
+
+#findCrops input{
+    border: 0px;
+    padding: 1rem;
+    font-size: 1rem;
+}
+#findCrops button{
+    background: transparent;
+    border: none;
+    font-size: 2rem; 
+    transform: translate(0%, 10%);
+}
+
+#results{
+    background: #9ddcf58f;
+    padding: 2rem;
+
+}
+
+ #close{
+    text-align: center;
+}
+#close button{
+    background: #9ddcf58f;
+    border: none;
+    padding: 1rem;
+    
+}
+
+.circle{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.circle img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#results, #plot{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-gap: 5px;
+} 
+#plot{
+    flex-grow: 1;
+    padding: 2rem;
+}
+.crop, .result{
+ display: flex;
+ flex-direction: column;
+ align-items: center; 
+ justify-content: center;
+ padding: 1rem;
+ text-align: center;
+}
+ 
+button.remove, button.add{
+    border: none;
+    background: transparent;  
+}
+
+.result button, .crop button { visibility: hidden; }
+.result:hover button, .crop:hover button{  visibility: visible; }
+ 
+
+#notice{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 1rem;
+    top: 10rem;
+}
+#notice div{  
+    background: #63c9f1;
+    color: #fff;
+    padding: 1rem 2rem; 
+} 
+
+#emptyPlot{
+    flex-grow: 1;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+footer #credits{
+    text-align: center;
+    padding: 2rem;
+    background:rgb(87, 51, 21);
+    color:rgb(219, 172, 134);
+}
+footer #credits a{
+    color:rgb(240, 209, 183);
+}
+
+@media (max-width: 600px) {
+    #navigation {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+  }
+  
